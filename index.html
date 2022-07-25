@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aeon's End Turn Order</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="sort-list.css"/>
+        <script src="sort-list.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="buttons">
+            <button onclick="next();">Next</button>
+            <button onclick="shuffle();">Shuffle</button>
+            <button onclick="reveal();">Reveal Next</button>
+            <button onclick="openReorder();">Reorder</button>
+            <button onclick="openReturn();">Add Used Card Back In</button>
+        </div>
+        <div id="decks">
+            <div class="deck" id="draw">
+                <img src="Back.svg">
+            </div>
+            <div class="deck" id="discard">
+            </div>
+        </div>
+        <script>
+            $( function() {
+              $( "#dialog" ).dialog();
+              $("#reorder").dialog({height: 800});
+              $("#reorder").dialog("close");
+              $("#return").dialog();
+              $("#return").dialog("close");
+            } );
+        </script>
+        <div id="dialog" title="Number of players">
+            <select name="nplayers" id="nplayers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button onclick="reset();">Start Game</button>
+        </div>
+
+        <div id="reorder" title="Select New Card Order">
+            <ul id="sortlist">
+
+            </ul>
+            <button onclick="reorder();">Submit</button>
+        </div>
+        <div id="return" title="Select which card to return">
+            <select name="return" id="returnselect">
+
+            </select>
+            <button onclick="moveToDraw();">Submit</button>
+        </div>
+    </body>
+</html>

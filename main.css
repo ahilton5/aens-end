@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(96, 71, 71);
+}
+
+img {
+    border-radius: 5%;
+    box-shadow: 0 0 5px 2px black;
+    /* width: inherit; */
+}
+
+.deck {
+    display: inline-block;
+    position: relative;
+    width: 45%;
+}
+
+.deck img {
+    position: absolute;
+}
+
+#decks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: auto;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    background-color: rgb(68, 17, 17);
+    color: white;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back {
+    cursor: pointer;
+}
+
+select {
+    padding: 10px;
+}
+
+#cardOrder {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.miniCard {
+    width: 50px;
+}
