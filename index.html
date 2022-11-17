@@ -11,12 +11,17 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <div id="buttons">
-            <button onclick="next();">Next</button>
-            <button onclick="shuffle();">Shuffle</button>
-            <button onclick="reveal();">Reveal next</button>
-            <button onclick="openReorder();">Rearrange the draw pile</button>
-            <button onclick="openReturn();">Shuffle a used card back into the draw pile</button>
+        <div class="columns">
+            <div class="buttons">
+                <button onclick="next();">Next</button>
+                <button onclick="shuffle();">Shuffle</button>
+                <button onclick="reveal();">Reveal next</button>
+            </div>
+            <div class="buttons">
+                <button onclick="openReorder();">Rearrange the draw pile</button>
+                <button onclick="openReturn();">Shuffle a used card back into the draw pile</button>
+                <button onclick="openRand();">Randomizers</button>
+            </div>
         </div>
         <div id="decks">
             <div class="deck" id="draw">
@@ -32,6 +37,8 @@
               $("#reorder").dialog("close");
               $("#return").dialog();
               $("#return").dialog("close");
+              $("#rand").dialog();
+              $("#rand").dialog("close");
             } );
         </script>
         <div id="dialog" title="Number of players">
@@ -55,6 +62,23 @@
 
             </select>
             <button onclick="moveToDraw();">Submit</button>
+        </div>
+        <div id="rand" title="Select what to randomize">
+            <input type="radio" id="Nemesis" name="rand" value="Nemesis" checked>
+            <label for="Nemesis">Nemesis</label><br>
+            <input type="radio" id="Mage" name="rand" value="Mage">
+            <label for="Mage">Mage</label><br>
+            <input type="radio" id="Gem" name="rand" value="Gem">
+            <label for="Gem">Gem</label><br>
+            <input type="radio" id="Relic" name="rand" value="Relic">
+            <label for="Relic">Relic</label><br>
+            <input type="radio" id="Spell" name="rand" value="Spell">
+            <label for="Spell">Spell</label><br>
+            <p>How many?</p>
+            <input type="number" id="n" value="1">
+            <button onclick="showSample();">Submit</button>
+            <hr>
+            <p id="result"></p>
         </div>
     </body>
 </html>

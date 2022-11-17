@@ -26,7 +26,13 @@ img {
     margin: auto;
 }
 
-#buttons {
+.columns {
+    display: flex;
+    width: 900px;
+    margin: auto;
+}
+
+.buttons {
     display: flex;
     flex-direction: column;
     max-width: 900px;
@@ -43,6 +49,15 @@ button {
     border:none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.buttons button {
+    width: 425px;
+}
+
+input[type=number] {
+    padding: 10px;
+    width: 75px
 }
 
 .back {
@@ -62,3 +77,14 @@ select {
 .miniCard {
     width: 50px;
 }
+
+/* #rand {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: rgb(102, 47, 47);
+}
+
+#rand:hover {
+    background-color: rgb(68, 17, 17);
+} */

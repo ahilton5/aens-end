@@ -1,3 +1,35 @@
+let nemesises = ["Wraithmonger", "The Wailing", "Fortress",
+  "Burrower", "Crooked Mask", "Rageborne", "Carapace Queen",
+  "Horde-Crone", "Prince of Gluttons", "Thrice-Dead Prophet"]
+
+let mages = ["Z'hana", "Brama", "Nym", "Nook", "Indira",
+  "Xaxos", "Mist", "Kadir", "Lash", "Phaedraxa", "Cairna",
+  "Reeve", "Ohat and Ulgimor", "Remnant", "Adelheim",
+  "Jian"]
+
+let relics = ["Transmogrifier", "Untable Prism", "Mage's Talisman",
+  "Flexing Dagger", "Focusing Orb", "Glass-Eyed Oracle",
+  "Riddlesphere", "Bottled Vortex", "Reflective Conduit",
+  "Will Weaver", "Astral Cube", "Vim Dynamo", "Blasting Staff"]
+
+let gems = ["Pain Stone", "Sifter's Pearl", "Banishing Topaz",
+  "Clouded Sapphire", "Burning Opal", "Alien Element",
+  "Haunted Berylite", "Cache Glass", "V'riswood Amber", "Jade",
+  "Olivinite", "Diamond Cluster", "Searing Ruby"]
+
+let spells = ["Phoenix Flame", "Spectral Echo", "Catalyst",
+  "Cleanse", "Pyromancy", "Scorch", "Ignite", "Chaos Arc",
+  "Wildfire Whip", "Arcane Nexus", "Disintegrating Scythe",
+  "Lava Tendril", "Embody Flame", "Dark Fire", "Esence Theft",
+  "Monstrous Inferno", "Devouring Shadow", "Feral Lightning",
+  "Oblivion Swell", "Memory Break", "Combustion", "Planar Insight",
+  "Consuming Void", "Void Bond", "Amplify Vision", "Breach Seeker",
+  "Mantra of Strength", "Crecendo Ray", "Snap Ritual", 
+  "Storm Vapors", "Char", "Feedback Aura", "Nether Conduit"]
+
+let stuff = {"Nemesis": nemesises, "Mage": mages, "Gem": gems,
+  "Relic": relics, "Spell": spells}
+
 let drawPile = [];
 let discardPile = [];
 
@@ -9,6 +41,18 @@ function shuffleArray(array) {
       array[i] = array[j];
       array[j] = temp;
   }
+}
+
+// https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
+function sample(arr, size) {
+  var shuffled = arr.slice(0), i = arr.length, temp, index;
+  while (i--) {
+      index = Math.floor((i + 1) * Math.random());
+      temp = shuffled[index];
+      shuffled[index] = shuffled[i];
+      shuffled[i] = temp;
+  }
+  return shuffled.slice(0, size);
 }
 
 let shuffle = () => { 
@@ -131,6 +175,18 @@ let openReorder = () => {
     cardOrder.appendChild(li);
   }
   slist(document.getElementById("sortlist"));
+}
+
+let openRand = () => {
+  $("#rand").dialog("open");
+}
+
+let showSample = () => {
+  let selection = document.querySelector('input[name="rand"]:checked').value;
+  let n = document.getElementById('n').value;
+  n = Math.min(n, stuff[selection].length);
+  console.log(sample(stuff[selection], n));
+  document.querySelector("#result").innerHTML = sample(stuff[selection], n).join("<br>");
 }
 
 let moveToDraw = () => {
