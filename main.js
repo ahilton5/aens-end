@@ -1,31 +1,111 @@
-let nemesises = ["Wraithmonger", "The Wailing", "Fortress",
-  "Burrower", "Crooked Mask", "Rageborne", "Carapace Queen",
-  "Horde-Crone", "Prince of Gluttons", "Thrice-Dead Prophet"]
+let nemesises = [
+  // Basic
+  "Crooked Mask", "Rageborne", "Carapace Queen", "Prince of Gluttons",
 
-let mages = ["Z'hana", "Brama", "Nym", "Nook", "Indira",
-  "Xaxos", "Mist", "Kadir", "Lash", "Phaedraxa", "Cairna",
-  "Reeve", "Ohat and Ulgimor", "Remnant", "Adelheim",
-  "Jian"]
+  // Return To Gravehold
+  "Burrower", "Fortress",
 
-let relics = ["Transmogrifier", "Untable Prism", "Mage's Talisman",
-  "Flexing Dagger", "Focusing Orb", "Glass-Eyed Oracle",
-  "Riddlesphere", "Bottled Vortex", "Reflective Conduit",
-  "Will Weaver", "Astral Cube", "Vim Dynamo", "Blasting Staff"]
+  // The Outer Dark
+  "Thrice-Dead Prophet", "Wraithmonger",
 
-let gems = ["Pain Stone", "Sifter's Pearl", "Banishing Topaz",
-  "Clouded Sapphire", "Burning Opal", "Alien Element",
-  "Haunted Berylite", "Cache Glass", "V'riswood Amber", "Jade",
-  "Olivinite", "Diamond Cluster", "Searing Ruby"]
+  // Shattered Dreams
+  "The Wailing", 
 
-let spells = ["Phoenix Flame", "Spectral Echo", "Catalyst",
-  "Cleanse", "Pyromancy", "Scorch", "Ignite", "Chaos Arc",
-  "Wildfire Whip", "Arcane Nexus", "Disintegrating Scythe",
-  "Lava Tendril", "Embody Flame", "Dark Fire", "Esence Theft",
-  "Monstrous Inferno", "Devouring Shadow", "Feral Lightning",
-  "Oblivion Swell", "Memory Break", "Combustion", "Planar Insight",
-  "Consuming Void", "Void Bond", "Amplify Vision", "Breach Seeker",
-  "Mantra of Strength", "Crecendo Ray", "Snap Ritual", 
-  "Storm Vapors", "Char", "Feedback Aura", "Nether Conduit"]
+  // The Depths
+  "Horde-Crone",
+
+  // Southern Village
+  "The Burning Kor"
+]
+
+let mages = [
+  // Basic
+  "Brama", "Xaxos", "Mist", "Kadir", "Lash", "Phaedraxa", "Adelheim",
+  "Jian",
+
+  // Return To Gravehold
+  "Cairna", "Ohat and Ulgimor",
+
+  // The Outer Dark
+  "Indira", "Remnant",
+
+  // Shattered Dreams
+  "Nook",
+
+  // The Depths
+  "Nym", "Reeve", "Z'hana",
+
+  // Southern Village
+  "Lucien", "Reth",
+  ]
+
+let relics = [
+  // Basic
+  "Unstable Prism", "Mage's Talisman", "Flexing Dagger",
+  "Focusing Orb", "Bottled Vortex", "Blasting Staff",
+
+  // Return To Gravehold
+  "Glass-Eyed Oracle",
+
+  // The Outer Dark
+  "Astral Cube", "Riddlesphere",
+
+  // Shattered Dreams
+  "Reflective Conduit", "Will Weaver",
+
+  // The Depths
+  "Transmogrifier", "Vim Dynamo",
+
+  // Southern Village
+  "Cat's Eye", "Volt Replicator", "Energized Conduit",
+]
+
+let gems = [
+  // Basic
+  "Sifter's Pearl", "Diamond Cluster", "Clouded Sapphire", "Jade",
+  "V'riswood Amber", "Burning Opal", "Searing Ruby",
+
+  // Return To Gravehold (NONE)
+
+  // The Outer Dark
+  "Alien Element", "Haunted Berylite", "Pain Stone",
+
+  // Shattered Dreams
+  "Cache Glass", "Olivinite",
+
+  // The Depths
+  "Banishing Topaz",
+
+  // Southern Village
+  "Guickening Qitite", "Jeweled Urup",   
+]
+
+let spells = [
+  // Basic
+  "Phoenix Flame", "Spectral Echo", "Chaos Arc", "Consuming Void",
+  "Dark Fire", "Wildfire Whip", "Arcane Nexus", "Lava Tendril",  
+  "Esence Theft", "Feral Lightning", "Ignite", "Oblivion Swell",
+  "Planar Insight", "Amplify Vision",
+
+  // Return To Gravehold
+  "Cleanse", "Memory Break",
+
+  // The Outer Dark
+  "Char", "Catalyst", "Feedback Aura", "Nether Conduit", "Pyromancy",
+  "Scorch",
+
+  // Shattered Dreams
+  "Breach Seeker", "Crecendo Ray", "Embody Flame", "Snap Ritual",
+  "Mantra of Strength", "Storm Vapors",
+
+  // The Depths
+  "Void Bond", "Combustion", "Devouring Shadow", "Monstrous Inferno",
+  "Disintegrating Scythe",
+
+  // Southern Village
+  "Gathering Winds", "Cinder Shower", "Erasure of Mind", "Flame Jab",
+  "Reaper's Flame", 
+]
 
 let stuff = {"Nemesis": nemesises, "Mage": mages, "Gem": gems,
   "Relic": relics, "Spell": spells}
@@ -185,7 +265,6 @@ let showSample = () => {
   let selection = document.querySelector('input[name="rand"]:checked').value;
   let n = document.getElementById('n').value;
   n = Math.min(n, stuff[selection].length);
-  console.log(sample(stuff[selection], n));
   document.querySelector("#result").innerHTML = sample(stuff[selection], n).join("<br>");
 }
 
