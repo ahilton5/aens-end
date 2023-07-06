@@ -15,13 +15,16 @@ let nemesises = [
   "Horde-Crone",
 
   // Southern Village
-  "The Burning Kor"
+  "The Burning Kor",
+
+  // War Eternal
+  "Umbra Titan", "Hollow Crown", "Magus of Cloaks", "Gate Witch"
 ]
 
 let mages = [
   // Basic
-  "Brama", "Xaxos", "Mist", "Kadir", "Lash", "Phaedraxa", "Adelheim",
-  "Jian",
+  "Brama", "Xaxos", "Mist (Basic)", "Kadir", "Lash", "Phaedraxa",
+  "Adelheim", "Jian",
 
   // Return To Gravehold
   "Cairna", "Ohat and Ulgimor",
@@ -37,74 +40,94 @@ let mages = [
 
   // Southern Village
   "Lucien", "Reth",
+
+  // War Eternal
+  "Dezmodia", "Ulgimor", "Quilius", "Mazahaedron", "Yan Magda",
+  "Mist (War Eternal)", "Gex", "Garu",
   ]
 
 let relics = [
   // Basic
-  "Unstable Prism", "Mage's Talisman", "Flexing Dagger",
-  "Focusing Orb", "Bottled Vortex", "Blasting Staff",
+  "Unstable Prism (3)", "Mage's Talisman (5)", "Flexing Dagger (2)",
+  "Focusing Orb (4)", "Bottled Vortex (3)", "Blasting Staff (4)",
 
   // Return To Gravehold
-  "Glass-Eyed Oracle",
+  "Glass-Eyed Oracle (1)",
 
   // The Outer Dark
-  "Astral Cube", "Riddlesphere",
+  "Astral Cube (5)", "Riddlesphere (3)",
 
   // Shattered Dreams
-  "Reflective Conduit", "Will Weaver",
+  "Reflective Conduit (3)", "Will Weaver (7)",
 
   // The Depths
-  "Transmogrifier", "Vim Dynamo",
+  "Transmogrifier (4)", "Vim Dynamo (4)",
 
   // Southern Village
-  "Cat's Eye", "Volt Replicator", "Energized Conduit",
+  "Cat's Eye (1)", "Volt Replicator (4)", "Energized Conduit (7)",
+
+  // War Eternal
+  "Vortex Guantlet (6)", "Primordial Fetish (4)", "Mages Totem (2)",
+  "Fiend Catcher (3)", "Conclave Scroll (3)", "Cairn Compass (4)",
 ]
 
 let gems = [
   // Basic
-  "Sifter's Pearl", "Diamond Cluster", "Clouded Sapphire", "Jade",
-  "V'riswood Amber", "Burning Opal", "Searing Ruby",
+  "Sifter's Pearl (3)", "Diamond Cluster (4)", "Clouded Sapphire (6)", "Jade (2)",
+  "V'riswood Amber (3)", "Burning Opal (5)", "Searing Ruby (4)",
 
   // Return To Gravehold (NONE)
 
   // The Outer Dark
-  "Alien Element", "Haunted Berylite", "Pain Stone",
+  "Alien Element (4)", "Haunted Berylite (3)", "Pain Stone (6)",
 
   // Shattered Dreams
-  "Cache Glass", "Olivinite",
+  "Cache Glass (4)", "Olivinite (3)",
 
   // The Depths
-  "Banishing Topaz",
+  "Banishing Topaz (5)",
 
   // Southern Village
-  "Guickening Qitite", "Jeweled Urup",   
+  "Guickening Qitite (3)", "Jeweled Urup (5)",
+
+  // War Eternal
+  "Volcanic Glass (3)", "Scoria Slag (4)", "Frozen Magmite (3)",
+  "Erratic Ingot (5)", "Dread Diamond (3)", "Breach Ore (4)",
+  "Bloodstone Jewel (6)"
 ]
 
 let spells = [
   // Basic
-  "Phoenix Flame", "Spectral Echo", "Chaos Arc", "Consuming Void",
-  "Dark Fire", "Wildfire Whip", "Arcane Nexus", "Lava Tendril",  
-  "Esence Theft", "Feral Lightning", "Ignite", "Oblivion Swell",
-  "Planar Insight", "Amplify Vision",
+  "Phoenix Flame (3)", "Spectral Echo (3)", "Chaos Arc (6)", "Consuming Void (7)",
+  "Dark Fire (5)s", "Wildfire Whip (6)", "Arcane Nexus (7)", "Lava Tendril (4)",  
+  "Esence Theft (5)", "Feral Lightning (5)", "Ignite (4)", "Oblivion Swell (5)",
+  "Planar Insight (6)", "Amplify Vision (4)",
 
   // Return To Gravehold
-  "Cleanse", "Memory Break",
+  "Cleanse (4)", "Memory Break (6)",
 
   // The Outer Dark
-  "Char", "Catalyst", "Feedback Aura", "Nether Conduit", "Pyromancy",
-  "Scorch",
+  "Char (8)", "Catalyst (6)", "Feedback Aura (5)", "Nether Conduit (7)", "Pyromancy (7)",
+  "Scorch (5)",
 
   // Shattered Dreams
-  "Breach Seeker", "Crecendo Ray", "Embody Flame", "Snap Ritual",
-  "Mantra of Strength", "Storm Vapors",
+  "Breach Seeker (5)", "Crecendo Ray (4)", "Embody Flame (7)", "Snap Ritual (6)",
+  "Mantra of Strength (3)", "Storm Vapors (4)",
 
   // The Depths
-  "Void Bond", "Combustion", "Devouring Shadow", "Monstrous Inferno",
-  "Disintegrating Scythe",
+  "Void Bond (4)", "Combustion (5)", "Devouring Shadow (6)", "Monstrous Inferno (8)",
+  "Disintegrating Scythe (7)",
 
   // Southern Village
-  "Gathering Winds", "Cinder Shower", "Erasure of Mind", "Flame Jab",
-  "Reaper's Flame", 
+  "Gathering Winds (3)", "Cinder Shower (5)", "Erasure of Mind (7)", "Flame Jab (1)",
+  "Reaper's Flame (7)", 
+
+  // War Eternal
+  "Reduce to Ash (7)", "Pyrotechnic Surge (4)", "Nova Forge (6)",
+  "Kindle (4)", "Jagged Lightning (4)", "Fiery Torrent (5)",
+  "Equilibrium (7)", "Crystalize (8)", "Convection Field (5)",
+  "Celestial Spire (5)", "Conjure the Lost (6)", "Carbonize (4)",
+  "Aurora (5)", "Thoughtform Familiar (3)"
 ]
 
 let stuff = {"Nemesis": nemesises, "Mage": mages, "Gem": gems,
@@ -262,10 +285,36 @@ let openRand = () => {
 }
 
 let showSample = () => {
+  document.querySelector("#result").innerHTML = "";
   let selection = document.querySelector('input[name="rand"]:checked').value;
   let n = document.getElementById('n').value;
   n = Math.min(n, stuff[selection].length);
-  document.querySelector("#result").innerHTML = sample(stuff[selection], n).join("<br>");
+  if (selection === "Gem" || selection === "Relic" || selection === "Spell") {
+    let table = document.createElement("table");
+    let items = sample(stuff[selection], n);
+    let tr = document.createElement("tr");
+    let cardHeader = document.createElement("th");
+    cardHeader.innerHTML = "Card";
+    tr.appendChild(cardHeader);
+    let costHeader = document.createElement("th");
+    costHeader.innerHTML = "Cost";
+    table.appendChild(tr);
+    tr.appendChild(costHeader);
+    for (let i = 0; i < items.length; i++) {
+      let row = document.createElement("tr");
+      let card = document.createElement("td");
+      card.innerHTML = items[i].split(" (")[0];
+      row.appendChild(card);
+      let cost = document.createElement("td");
+      cost.innerHTML = items[i].split(" (")[1].slice(0, -1);
+      row.appendChild(cost);
+      table.appendChild(row);
+    }
+    document.querySelector("#result").appendChild(table);
+  }
+  else {
+    document.querySelector("#result").innerHTML = sample(stuff[selection], n).join("<br>");
+  }
 }
 
 let moveToDraw = () => {

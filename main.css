@@ -78,6 +78,18 @@ select {
     width: 50px;
 }
 
+#result table, tr, td, th {
+    border-collapse: collapse;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+#result td, th {
+    padding: 5px;
+}
+
+#result tr:hover {
+    background-color: rgb(169, 182, 193);
+}
 /* #rand {
     position: absolute;
     right: 5px;
